@@ -61,6 +61,10 @@ public class MainActivity extends ActionBarActivity {
 
 		display.getMetrics(metrics);
 
+		/**
+		 * Adjust the following integer value 20 get the required size of the
+		 * counter
+		 */
 		required_size = metrics.widthPixels / 20;
 
 		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
@@ -92,7 +96,8 @@ public class MainActivity extends ActionBarActivity {
 			}
 
 			@Override
-			public void onPageScrolled(int viewPagerPosition, float arg1, int arg2) {
+			public void onPageScrolled(int viewPagerPosition, float arg1,
+					int arg2) {
 				for (int i = 0; i < NUM_PAGES; i++) {
 
 					int id = 2000 + i;
