@@ -18,6 +18,8 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends ActionBarActivity {
 
+	private static final int VIEW_ID = 2000;
+
 	/**
 	 * The number of pages (wizard steps) to show in this demo.
 	 */
@@ -80,10 +82,10 @@ public class MainActivity extends ActionBarActivity {
 
 		for (int i = 0; i < NUM_PAGES; i++) {
 			button = new Button(this);
-			int id = 2000 + i;
+			int id = VIEW_ID + i;
 			// D.showLog("button id outer " + id);
 			button.setId(id);
-			counters[i] = 2000 + i;
+			counters[i] = VIEW_ID + i;
 			button.setLayoutParams(params);
 			button.setBackgroundColor(Color.parseColor("#00ff00"));
 			ll.addView(button);
@@ -100,7 +102,7 @@ public class MainActivity extends ActionBarActivity {
 					int arg2) {
 				for (int i = 0; i < NUM_PAGES; i++) {
 
-					int id = 2000 + i;
+					int id = VIEW_ID + i;
 
 					Button b = (Button) findViewById(id);
 
